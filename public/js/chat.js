@@ -29,7 +29,20 @@ socket.on('connect', function () {
 			console.log('no error');
 		}
 	})
+});
 
+socket.on('disconnect', function() {
+	console.log('Disconnected')
+});
+
+socket.on('updateUserList', function (users) {
+	var ol = jQuery('<ol></ol>')
+
+	users.forEach(function(user){
+		ol.append(jQuery('<li></li>').text(user))
+	});
+
+	$('#users').html(ol);
 });
 
 socket.on('newMessage', function(message){
