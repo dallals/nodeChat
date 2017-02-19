@@ -1,7 +1,6 @@
 
 var socket = io();
 
-
 function scrollToBottom () {
 	// selectors
 	var messages = $('#messages');
@@ -12,6 +11,16 @@ function scrollToBottom () {
 	var scrollHeight = messages.prop('scrollHeight');
 	var newMessageHeight = newMessage.innerHeight();
 	var lastMessageHeight = newMessage.prev().innerHeight();
+
+	ion.sound({
+		sounds : [
+			{name: "beer_can_opening"}
+		],
+		path: "/js/ion.sound-3.0.7/sounds/",
+		preload: true,
+		multiplay: true,
+		volume: 0.5
+	});
 
 	if(clientHeight + scrollTop + newMessageHeight + lastMessageHeight >= scrollHeight) {
 		messages.scrollTop(scrollHeight);
@@ -55,6 +64,7 @@ socket.on('newMessage', function(message){
 	});
 
 	jQuery('#messages').append(html);
+	ion.sound.play("beer_can_opening");
 	scrollToBottom();
 
 });

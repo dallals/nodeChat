@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://localhost:8000/#!/#%2Fcompanies -->
+<html ng-app="app" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+	<title>Black Belt Mean Stack</title>
+
+  <script src="./Black Belt Mean Stack_files/angular.min.js"> </script>
+	<script src="./Black Belt Mean Stack_files/route.min.js"></script>
+	<script src="./Black Belt Mean Stack_files/dirPaginate.js"></script>
+  <link rel="stylesheet" href="./Black Belt Mean Stack_files/bootstrap.min.css">
+  <link rel="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+	
+	<script src="./Black Belt Mean Stack_files/app.js"></script>
+	<script src="./Black Belt Mean Stack_files/Controllers.js"></script>
+	<!-- <script src = "controllers/customerController.js"></script> -->
+
+	<script src="./Black Belt Mean Stack_files/Factories.js"></script>
+	<!-- <script src = "factories/orderFactory.js"></script> -->
+
+
+</head>
+<body>
+
+	<div class="container">
+			
+			<!-- ngView: --><div ng-view="" class="ng-scope">
+
+
+	<title class="ng-scope"></title>
+
+
+<h1 class="ng-scope">Careerlark App</h1>
+<table class="search-results-table col-md-12 table table-striped ng-scope">
+            <thead>
+              <tr>  
+                <th> Name </th>
+                <th> Team ID </th>
+                <th> Domain Name</th>
+                <th> Email Domain</th>
+                <th> Status</th>
+                <th> Time Zone </th> 
+              </tr>
+            </thead> 
+              <tbody>          
+                <tr dir-paginate="company in companies | filter: filter_name | itemsPerPage:8" class="">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>  
+                </tr>            
+              </tbody>
+          </table> 
+
+</div>
+	</div>
+
+</body></html>
